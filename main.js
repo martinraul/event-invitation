@@ -70,7 +70,6 @@ function handlingErrors(errors) {
 	return cantidadDeErrores
 }
 
-
 function validateName(name) {
 	if (name.length === 0) {
 		return 'This field is required';
