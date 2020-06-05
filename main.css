@@ -1,9 +1,10 @@
-
-body{background: background: rgb(0,0,8);
-  background: linear-gradient(90deg, rgba(0,0,8,1) 15%, rgba(0,9,11,1) 47%, rgba(0,34,41,1) 76%);
+body {
+  background: background: rgb(0, 0, 8);
+  background: linear-gradient(90deg, rgba(0, 0, 8, 1) 15%, rgba(0, 9, 11, 1) 47%, rgba(0, 34, 41, 1) 76%);
 }
-.top-buffer { 
-  margin-top:20px; 
+
+.top-buffer {
+  margin-top: 20px;
 }
 
 h1 {
@@ -12,51 +13,53 @@ h1 {
   border: solid rgb(2, 134, 85);
   text-align: center;
   border-radius: 6px;
-  font-weight: bold; 
-  
+  font-weight: bold;
+}
 
-} 
-h2{  font: 3em Monospace;
+h2 {
+  font: 3em Monospace;
   color: white;
   background-color: rgb(2, 134, 85);
   text-align: center;
   border-radius: 3px;
+}
 
-}
-h3{
- color: white;
- background-color: red;
- text-align: center;
-}
-form{
+h3 {
+  color: white;
+  background-color: red;
   text-align: center;
 }
 
-input{
+form {
+  text-align: center;
+}
+
+input {
   font: 1em monospace;
   width: 150px;
   height: 30px;
   box-sizing: border-box;
   border: 1px solid green;
   border-radius: 4px;
-
 }
-button{
+
+button {
   padding: 5px;
   font-size: 15px;
   color: white;
-  background-color:rgb(200, 15, 46); 
+  background-color: rgb(200, 15, 46);
   border-radius: 6px;
   font-weight: bold;
-  border: 1px solid  rgb(2, 134, 85);
+  border: 1px solid rgb(2, 134, 85);
   margin-left: 5%;
   transition-duration: 0.4s;
-} 
-.bio{
-  color:white;
 }
 
-img{
+.bio {
+  color: white;
+}
+
+img {
   border-radius: 5px;
 }
 
@@ -64,7 +67,7 @@ img{
   display: none;
 }
 
-#errores{
+#errores {
   color: white;
   align-content: center;
 }
