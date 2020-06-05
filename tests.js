@@ -1,25 +1,25 @@
 
 function testValidateName() {
 	console.assert(
-		testValidateName('') === 'This field is required',
+		validateName('') === 'This field is required',
 		'Validate NAME test failed',
 	);
 }
 function testValidateSurname() {
 	console.assert(
-		testValidateSurname('') === 'This field is required',
+		validateSurname('') === 'This field is required',
 		'Validate SURNAME test failed',
 	);
 }
 function testValidateMail() {
 	console.assert(
-		testValidateMail('') === 'mail required',
+		validateMail('') === 'Mail required',
 		'Validate MAIL test failed',
 	);
 }
 function testValidateAge() {
 	console.assert(
-		testValidateAge('') === 'This field is required',
+		validateAge('') === 'This field is required',
 		'Validate AGE test failed',
 	);
 }

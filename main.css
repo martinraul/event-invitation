@@ -1,9 +1,7 @@
 
-body{
-  background-color: #000000;
-  background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+body{background: background: rgb(0,0,8);
+  background: linear-gradient(90deg, rgba(0,0,8,1) 15%, rgba(0,9,11,1) 47%, rgba(0,34,41,1) 76%);
 }
-
 .top-buffer { 
   margin-top:20px; 
 }
