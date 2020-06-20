@@ -5,96 +5,100 @@
 // mostrar toda la información junta en un campo de texto
 // Y va a cambiar el <h1> para decir "Bienvenido, nombreDeUsuario"!
 "use strict";
-const $joinButton = document.querySelector('#join');
-const $form = document.querySelector("#form")
+const $joinButton = document.querySelector("#join-button");
+const $form = document.querySelector("#form");
 
 $joinButton.onclick = function () {
-	validateForm(event)
-	return false
-}
+  validateForm(event);
+  hideErrorAlert();
+  return false;
+};
 
 function validateForm(event) {
-	const name = $form.name.value;
-	const surname = $form.surname.value;
-	const mail = $form.mail.value;
-	const age = $form.age.value;
+  const name = $form.name.value;
+  const surname = $form.surname.value;
+  const mail = $form.mail.value;
+  const age = $form.age.value;
 
-	const nameError = validateName(name);
-	const surnameError = validateSurname(surname);
-	const mailError = validateMail(mail);
-	const ageError = validateAge(age);
+  const nameError = validateName(name);
+  const surnameError = validateSurname(surname);
+  const mailError = validateMail(mail);
+  const ageError = validateAge(age);
 
-	const errors = {
-		name: nameError,
-		surname: surnameError,
-		mail: mailError,
-		age: ageError,
-	}
+  const errors = {
+    name: nameError,
+    surname: surnameError,
+    mail: mailError,
+    age: ageError,
+  };
 
-
-	const esSucess = handlingErrors(errors) === 0
-	if (esSucess) {
-		console.log(errors)
-		$form.className = "hide";
-		document.querySelector("#errors").className = "hide";
-		var sucess = document.querySelector("#results");
-		sucess.className = "alert alert-success";
-		sucess.textContent = `Thanks ${name.toUpperCase()} ${surname.toUpperCase()} we wait for you`
-	}
-	event.preventDefault()
+  const esSucess = handlingErrors(errors) === 0;
+  if (esSucess) {
+    console.log(errors);
+    $form.className = "hide";
+    document.querySelector("#errors").className = "hide";
+    var sucess = document.querySelector("#results");
+    sucess.className = "alert alert-success";
+    sucess.textContent = `Thanks ${name.toUpperCase()} ${surname.toUpperCase()} we wait for you`;
+  }
+  event.preventDefault();
 }
 
-
 function handlingErrors(errors) {
+  const keys = Object.keys(errors);
+  const $errors = document.querySelector("#errors");
+  let cantidadDeErrores = 0;
 
-	const keys = Object.keys(errors);
-	const $errors = document.querySelector('#errors')
-	let cantidadDeErrores = 0;
+  keys.forEach(function (key) {
+    const error = errors[key];
 
-	keys.forEach(function (key) {
-		const error = errors[key];
+    if (error) {
+      cantidadDeErrores++;
+      $form[key].className = "error";
+      const $error = document.createElement("li");
+      $error.innerText = error;
+      $error.className = "alert alert-danger";
+      $errors.appendChild($error);
+    } else {
+      $form[key].className = "";
+    }
+  });
+  return cantidadDeErrores;
+}
 
-		if (error) {
-			cantidadDeErrores++
-			$form[key].className = "error"
+function hideErrorAlert() {
+  const password = document.querySelector("#form");
 
-			const $error = document.createElement('li')
-			$error.innerText = error;
-			$error.className = "alert alert-danger"
-			$errors.appendChild($error);
-		}
-		else {
-			$form[key].className = ""
-		}
-	});
-	return cantidadDeErrores
+  password.addEventListener("focus", (event) => {
+	  document.querySelector("#errors").innerHTML = "";
+  }, true);
+
 }
 
 function validateName(name) {
-	if (name.length === 0) {
-		return 'This field is required';
-	}
-	return "";
+  if (name.length === 0) {
+    return "This field is required";
+  }
+  return "";
 }
 
 function validateSurname(surname) {
-	if (surname.length === 0) {
-		return 'This field is required';
-	}
-	return "";
+  if (surname.length === 0) {
+    return "This field is required";
+  }
+  return "";
 }
 
 function validateMail(mail) {
-	if (mail.length === 0) {
-		return 'Mail required';
-	}
-	return "";
+  if (mail.length === 0) {
+    return "Mail required";
+  }
+  return "";
 }
 
 function validateAge(age) {
-
-	if (age.length === 0) {
-		return 'This field is required';
-	}
-	return "";
+  if (age.length === 0) {
+    return "This field is required";
+  }
+  return "";
 }

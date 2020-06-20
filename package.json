@@ -1,0 +1,25 @@
+{
+  "name": "event-invitation",
+  "version": "1.0.0",
+  "description": "Form Practice for r/argentinaPrograma",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^4.8.0"
+  },
+  "scripts": {
+    "start":"http-server -c-1",
+    "open": "cypress open",
+    "test": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinraul/Event-invitation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martinraul/Event-invitation/issues"
+  },
+  "homepage": "https://github.com/martinraul/Event-invitation#readme"
+}
