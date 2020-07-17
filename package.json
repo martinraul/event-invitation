@@ -5,10 +5,11 @@
   "main": "index.html",
   "dependencies": {},
   "devDependencies": {
-    "cypress": "^4.8.0"
+    "cypress": "^4.8.0",
+    "eslint": "^7.4.0"
   },
   "scripts": {
-    "start":"http-server -c-1",
+    "start": "http-server -c-1",
     "open": "cypress open",
     "test": "cypress run"
   },
