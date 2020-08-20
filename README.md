@@ -8,4 +8,4 @@
  Cypress for testing
 
 Working link at:
-https://martinraul.github.io/Event-invitation/
+https://martinraul.github.io/event-invitation/
