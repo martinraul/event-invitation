@@ -79,3 +79,8 @@ img {
 .error {
   border: 2px solid red;
 }
+
+#version {
+  color: white;
+  text-align: center;
+}
