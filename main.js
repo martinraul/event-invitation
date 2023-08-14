@@ -102,3 +102,16 @@ function validateAge(age) {
   }
   return "";
 }
+
+function updateDate() {
+  const currentDate = new Date();
+  const day = String(currentDate.getDate()).padStart(2, '0');
+  const month = String(currentDate.getMonth() + 1).padStart(2, '0'); //January is 0!
+  const year = currentDate.getFullYear();
+
+  const dateString = day + '/' + month + '/' + year;
+
+  document.getElementById('current-date').textContent = dateString;
+}
+
+updateDate();
